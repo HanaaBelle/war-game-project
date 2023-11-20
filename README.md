@@ -92,6 +92,9 @@ Cela inclut la création d'un deck de cartes, le mélange de ce deck, et la dist
 On crée une représentation des cartes d'un jeu standard de "52 cartes" qui contient "4 enseignes" et "13 valeurs".
 (voir GameLogic.js)
 
+#### 3.2 Création du Deck
+On crée une fonction pour générer un deck de cartes complet (voir GameLogic.js).
+
 
 # React + Vite
 
