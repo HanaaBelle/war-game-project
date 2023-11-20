@@ -1,10 +1,7 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import GameBoard from './GameBoard';
 import ScoreBoard from './ScoreBoard';
 
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -12,7 +9,7 @@ function App() {
 
   return (
     <>
-        <div className="App">
+        <div className="App flex flex-col items-center justify-center min-h-screen bg-gray-200">
             <GameBoard />
             <ScoreBoard />
         </div>

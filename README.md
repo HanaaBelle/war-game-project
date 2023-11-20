@@ -54,7 +54,7 @@ Création des composants de base dans React Vite
 
 - App.jsx (le composant racine de notre application, qui servira de conteneur pour les autres composants),
 - GameBoard.jsx (pour gérer l'affichage du plateau de jeu y compris les cartes et les actions des joueurs), 
-- ScoreBoard.jsx (pour afficher les scores des joueurs).
+- ScoreBoard.jsx (pour créer un affichage distinct pour les scores des joueurs).
 
 Comme App.jsx a été généré automatiquement par Vite lors de l'initialisation du projet. 
 On va le modifier pour inclure nos composants "GameBoard" et "ScoreBoard" (voir App.jsx, GameBoard.jsx, ScoreBoard.jsx).
@@ -73,6 +73,16 @@ Utilisation de Tailwind pour ajouter du style à nos composants.
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 `
+##### 2.2.3 Ajout des classes Tailwind pour styliser mes composants
+- Dans "App.jsx", on centre verticalement et horizontalement du contenu. On ajoute de l'espace autour des composants et 
+on s'assure que le conteneur prend au minimum la hauteur de l'écran (voir App.jsx).
+
+- Dans "GameBoard.jsx", on ajoute du padding, une ombre pour un effet en relief, et des coins arrondis 
+(voir GameBoard.jsx). 
+
+- Dans "ScoreBoard.jsx", on ajoute une marge en haut pour séparer le "score board" du "game board", et on centre le 
+texte à l'intérieur (voir ScoreBoard.jsx).
+
 
 # React + Vite
 
