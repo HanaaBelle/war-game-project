@@ -95,6 +95,13 @@ On crée une représentation des cartes d'un jeu standard de "52 cartes" qui con
 #### 3.2 Création du Deck
 On crée une fonction pour générer un deck de cartes complet (voir GameLogic.js).
 
+#### 3.3 Mélanger le Deck
+On utilise l'algorithme de mélange de "Fisher-Yates" aussi appelé "mélange de Knuth" qui est une méthode efficace et 
+juste pour mélanger un tableau (voir GameLogic.js).
+
+
+
+
 
 # React + Vite
 
