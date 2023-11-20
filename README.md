@@ -50,7 +50,7 @@ war-game-project/
    └─ ... (autres fichiers de configuration)
 
 #### 2.1 Structuration du projet
-Création des composants de base dans React :
+Création des composants de base dans React Vite
 
 - App.jsx (le composant racine de notre application, qui servira de conteneur pour les autres composants),
 - GameBoard.jsx (pour gérer l'affichage du plateau de jeu y compris les cartes et les actions des joueurs), 
@@ -59,6 +59,20 @@ Création des composants de base dans React :
 Comme App.jsx a été généré automatiquement par Vite lors de l'initialisation du projet. 
 On va le modifier pour inclure nos composants "GameBoard" et "ScoreBoard" (voir App.jsx, GameBoard.jsx, ScoreBoard.jsx).
 
+#### 2.2 Stylisation avec Tailwind
+Utilisation de Tailwind pour ajouter du style à nos composants.
+
+##### 2.2.1 Installation de Tailwind CSS avec les lignes de commande suivantes
+
+`npm install -D tailwindcss@latest postcss@latest autoprefixer@latest`
+`npx tailwindcss init -p`
+
+##### 2.2.2 Intègration de Tailwind à notre projet en ajoutant les lignes suivantes au fichier "index.css"
+
+`@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+`
 
 # React + Vite
 
