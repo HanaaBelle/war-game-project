@@ -1,3 +1,7 @@
+import React from 'react';
+import GameBoard from './GameBoard';
+import ScoreBoard from './ScoreBoard';
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -8,6 +12,10 @@ function App() {
 
   return (
     <>
+        <div className="App">
+            <GameBoard />
+            <ScoreBoard />
+        </div>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -32,4 +40,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
