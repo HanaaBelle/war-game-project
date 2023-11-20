@@ -83,6 +83,15 @@ on s'assure que le conteneur prend au minimum la hauteur de l'écran (voir App.j
 - Dans "ScoreBoard.jsx", on ajoute une marge en haut pour séparer le "score board" du "game board", et on centre le 
 texte à l'intérieur (voir ScoreBoard.jsx).
 
+### Étape 3 : Logique du "WAR GAME" 
+On crée un nouveau fichier "GameLogic.js" où on mettra la logique principale du jeu.
+Cela inclut la création d'un deck de cartes, le mélange de ce deck, et la distribution des cartes aux joueurs. 
+(voir GameLogic.js)
+
+#### 3.1 Définition des Cartes
+On crée une représentation des cartes d'un jeu standard de "52 cartes" qui contient "4 enseignes" et "13 valeurs".
+(voir GameLogic.js)
+
 
 # React + Vite
 
