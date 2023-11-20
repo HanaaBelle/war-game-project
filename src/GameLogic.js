@@ -30,9 +30,16 @@ function shuffleDeck(deck) {
     console.log(deck);
 }
 
+// La fonction distributeCards(deck) permet de distribuer équitablement les cartes entre les deux joueurs.
+// Elle divise le deck en deux moitiés et les retourne dans un tableau, représentant les mains des deux joueurs.
+function distributeCards(deck) {
+    const moitie_du_deck = deck.length / 2;
+    return [deck.slice(0, moitie_du_deck), deck.slice(moitie_du_deck)];
+}
 
 
 console.log(createDeck());
 
 shuffleDeck(deck);
 
+console.log(distributeCards(deck))

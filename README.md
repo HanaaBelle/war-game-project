@@ -99,7 +99,8 @@ On crée une fonction pour générer un deck de cartes complet (voir GameLogic.j
 On utilise l'algorithme de mélange de "Fisher-Yates" aussi appelé "mélange de Knuth" qui est une méthode efficace et 
 juste pour mélanger un tableau (voir GameLogic.js).
 
-
+#### 3.4 Distribution les Cartes
+On crée une fonction qui distribue les cartes de manière équitable entre deux joueurs.
 
 
 
