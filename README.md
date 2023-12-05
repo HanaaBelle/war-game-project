@@ -124,6 +124,11 @@ images de cartes (voir GameLogic.js).
 #### 3.10 Affichage du résultat du score des deux joueurs
 (voir ScoreBoard.jsx).
 
+#### 3.11 Réaliser la fonction "jouerTour" 
+Lorsqu'on clique sur le bouton "Bataille" ça entraîne le retournement des cartes des deux decks des joueurs
+(voir GameBoard.jsx) qui appelle la fonction "compareCards". 
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
