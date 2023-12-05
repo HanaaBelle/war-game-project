@@ -118,6 +118,9 @@ images de cartes (voir GameLogic.js).
 #### 3.8 Ajout d'un état (state) 
 (voir App.jsx).
 
+#### 3.9 Gestion des scores des deux joueurs
+(voir GameBoard.jsx).
+
 
 # React + Vite
 
