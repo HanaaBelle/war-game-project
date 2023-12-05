@@ -58,6 +58,21 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 18px; /* Taille de police plus petite pour les tablettes */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px; /* Taille de police encore plus petite pour les téléphones */
+  }
+  .logo {
+    height: 4em; /* Taille de logo réduite pour les petits écrans */
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

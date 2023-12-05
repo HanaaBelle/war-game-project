@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 /* Dans votre fichier CSS global */
 * {
   box-sizing: border-box; /* Cela aide à gérer le layout plus prévisiblement */
@@ -51,8 +55,8 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+@media screen and (max-width: 600px) {
+  a:nth-of-type(2) .App {
     animation: logo-spin infinite 20s linear;
   }
 }

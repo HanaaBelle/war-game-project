@@ -95,7 +95,7 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                         {decks_des_joueurs.joueur_1[0] && (
                             <img src={revealCards ? decks_des_joueurs.joueur_1[0]?.image : dosDeCarte}
                                  alt="Dos de carte"
-                                 className='bg-red-800 rounded-xl shadow-lg p-2 m-2' height="250px" width="250px"/>
+                                 className='bg-red-800 rounded-xl shadow-lg p-2 m-2 h-auto' height="250px" width="250px"/>
                         )}
                         <div className="mb-2">Vous</div>
                     </div>
@@ -105,7 +105,7 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                         {decks_des_joueurs.joueur_2[0] && (
                             <img src={revealCards ? decks_des_joueurs.joueur_2[0]?.image : dosDeCarte}
                                  alt="Dos de carte"
-                                 className='bg-red-800 rounded-xl shadow-lg p-2 m-2' height="250px" width="250px"/>
+                                 className='bg-red-800 rounded-xl shadow-lg p-2 m-2 h-auto' height="250px" width="250px"/>
                         )}
                         <div className="mb-2">L'ordinateur</div>
                     </div>
@@ -113,9 +113,8 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                 </div>
 
                 <div className="flex items-center justify-center">
-                    <img src={"/cards/warGame.png"} className="war-game mb-2 rounded-xl cursor-pointer"
-                         alt="war game"
-                         height="100px" width="100px" onClick={jouerTour}/>
+                    <img src={"/cards/warGame.png"} className="war-game mb-2 rounded-xl h-auto cursor-pointer"
+                         alt="war game" height="100px" width="100px" onClick={jouerTour}/>
                 </div>
             </div>
 
