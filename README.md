@@ -121,6 +121,8 @@ images de cartes (voir GameLogic.js).
 #### 3.9 Gestion des scores des deux joueurs
 (voir GameBoard.jsx).
 
+#### 3.10 Affichage du résultat du score des deux joueurs
+(voir ScoreBoard.jsx).
 
 # React + Vite
 
