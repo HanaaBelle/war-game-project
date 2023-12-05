@@ -6,11 +6,8 @@ function ScoreBoard({scoreJoueur1, scoreJoueur2}) {
         <>
             <div className="score-board text-center text-white">
                 <div className="card">
-                    <div>Score Joueur 1 : {scoreJoueur1}</div>
-                    <div>Score Joueur 2 : {scoreJoueur2}</div>
-                    <button>
-                        Score is {}
-                    </button>
+                    <div> 🫵 Score : {scoreJoueur1}</div>
+                    <div> 💻 Score : {scoreJoueur2}</div>
                 </div>
             </div>
         </>

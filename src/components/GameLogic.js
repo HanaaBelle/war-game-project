@@ -1,6 +1,6 @@
 // Représentation des cartes d'un jeu standard de 52 cartes contenant
-const enseignes = ['coeurs', 'piques', 'carreaux', 'trefles']; // "4 enseignes
 const valeurs = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14']; // "13 valeurs"
+const enseignes = ['coeurs', 'piques', 'carreaux', 'trefles']; // "4 enseignes
 
 // On intègre des images (voir le dossier : public/cards) correspondant à chaque combinaison de carte avec la fonction
 // createDeck() qui génère un deck de cartes complet en créant une nouvelle carte pour chaque combinaison de valeur et
