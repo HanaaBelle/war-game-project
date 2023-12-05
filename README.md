@@ -40,9 +40,12 @@ war-game-project/
    ├─ public/
    ├─ src/
       ├─ assets
-      ├─ App.jsx 
-      ├─ GameBoard.jsx
-      ├─ ScoreBoard.jsx
+      ├─ App.jsx
+      ├─ pages
+      ├─ components 
+         ├─ GameBoard.jsx
+         ├─ ScoreBoard.jsx
+         ├─ GameLogic.js
       └─ ... (autres fichiers et dossiers, comme index.css)
    ├─ .gitignore
    ├─ index.html
@@ -95,13 +98,25 @@ On crée une représentation des cartes d'un jeu standard de "52 cartes" qui con
 #### 3.2 Création du Deck
 On crée une fonction pour générer un deck de cartes complet (voir GameLogic.js).
 
-#### 3.3 Mélanger le Deck
+#### 3.3 Mélange du Deck
 On utilise l'algorithme de mélange de "Fisher-Yates" aussi appelé "mélange de Knuth" qui est une méthode efficace et 
 juste pour mélanger un tableau (voir GameLogic.js).
 
 #### 3.4 Distribution les Cartes
-On crée une fonction qui distribue les cartes de manière équitable entre deux joueurs.
+On crée une fonction qui distribue les cartes de manière équitable entre deux joueurs (voir GameLogic.js).
 
+#### 3.5 Utilisation des fonctions (Création et Mélange du Deck ainsi que Distribution les Cartes) dans le Projet
+On exporte les fonctions pour les utiliser dans d'autres parties de notre application (voir GameLogic.js).
+
+#### 3.6 Intégration des fonctions dans le composant React "GameBoard.jsx" 
+(voir GameBoard.js)
+
+#### 3.7 Affichage des images des cartes depuis le dossier (public/cards)
+Pour afficher des images de chaque carte et permettre aux joueurs de voir leur deck et de cliquer dessus pour révéler des 
+images de cartes (voir GameLogic.js). 
+
+#### 3.8 Ajout d'un état (state) 
+(voir App.jsx).
 
 
 # React + Vite
