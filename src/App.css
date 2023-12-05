@@ -1,3 +1,28 @@
+/* Dans votre fichier CSS global */
+* {
+  box-sizing: border-box; /* Cela aide à gérer le layout plus prévisiblement */
+  border-radius: 40px;
+  font-size: 21px;
+  font-style: ;
+}
+
+@font-face {
+  font-family: 'Black_Chancy';
+  src: url('src/assets/black_chancery/BLKCHCRY.TTF') format('truetype');
+}
+
+body {
+  font-family: 'Black_Chancy', cursive;
+  margin: 0; /* Réinitialiser les marges par défaut */
+  padding: 0; /* Réinitialiser le padding par défaut */
+  width: 100vw; /* Largeur de la fenêtre de visualisation */
+  height: 100vh; /* Hauteur de la fenêtre de visualisation */
+  background-color: #204d1b; /* Couleur de fond */
+  border: groove 30px #2f1111; /* Style, épaisseur, et couleur de la bordure */
+  border-radius: 40px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); /* Effet ombre */
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

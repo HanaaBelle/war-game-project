@@ -41,7 +41,12 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
     // la carte du haut de chaque deck et l'appel de la fonction "compareCards" compare les cartes des deux joueurs
     // pour déterminer quel joueur gagne le tour
     const jouerTour = () => {
+
+        // Révéler les cartes
+        setRevealCards(true);
+
         if (decks_des_joueurs.joueur_1.length > 0 && decks_des_joueurs.joueur_2.length > 0) {
+
             const carteJoueur1 = decks_des_joueurs.joueur_1.shift();
             const carteJoueur2 = decks_des_joueurs.joueur_2.shift();
 
@@ -61,54 +66,47 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                 joueur_1: [...decks_des_joueurs.joueur_1],
                 joueur_2: [...decks_des_joueurs.joueur_2]
             });
-
-            // Révéler les cartes
-            setRevealCards(true);
         }
     };
 
     return (
         <>
-            <div className="text-white p-5 bg-green-900 flex flex-col items-center justify-center rounded-3xl">
-                <div className="mb-4">
+            <div className="text-white p-2 flex flex-col items-center justify-center mx-auto">
+                <div className="mb-0">
                     Nombre de cartes qui restent dans chaque main : {decks_des_joueurs.joueur_1.length}
                 </div>
 
-                <div className="game-board rounded-lg flex justify-between items-center px-20">
+                <div className="game-board rounded-lg flex justify-around items-center w-full">
 
                     {/* Affichage du deck du joueur 1 */}
-                    <div onClick={() => {
-                    }} className="flex items-center justify-start">
+                    <div className="flex flex-col items-center rounded-3xl justify-center m-7">
                         {decks_des_joueurs.joueur_1[0] && (
                             <img src={revealCards ? decks_des_joueurs.joueur_1[0]?.image : dosDeCarte}
                                  alt="Dos de carte"
-                                 className='rounded-3xl shadow-lg mb-2' height="250px" width="250px"/>
+                                 className='bg-red-800 rounded-xl shadow-lg p-2 m-2' height="250px" width="250px"/>
                         )}
-
+                        <div className="mb-2">Vous</div>
                     </div>
 
-                    {/* Espace pour jouer les cartes */}
-                    <div className="flex-grow"></div>
-
                     {/* Affichage du deck du joueur 2 */}
-                    <div onClick={() => {
-                    }} className="flex items-center justify-end">
+                    <div className="flex flex-col items-center rounded-3xl justify-center m-7">
                         {decks_des_joueurs.joueur_2[0] && (
                             <img src={revealCards ? decks_des_joueurs.joueur_2[0]?.image : dosDeCarte}
                                  alt="Dos de carte"
-                                 className='rounded-3xl shadow-lg mb-2' height="250px" width="250px"/>
+                                 className='bg-red-800 rounded-xl shadow-lg p-2 m-2' height="250px" width="250px"/>
                         )}
-
+                        <div className="mb-2">L'ordinateur</div>
                     </div>
+
+                </div>
+
+                <div className="flex items-center justify-center">
+                    <img src={"/cards/warGame.png"} className="war-game mb-2 rounded-xl cursor-pointer"
+                         alt="war game"
+                         height="100px" width="100px" onClick={jouerTour}/>
                 </div>
             </div>
 
-            <div className="flex items-center justify-center my-4">
-                <img src={"/cards/warGame.png"} className="war-game mb-2 rounded-3xl cursor-pointer"
-                     alt="war game"
-                     height="100px" width="100px" onClick={jouerTour}/>
-
-            </div>
         </>
 
     )
