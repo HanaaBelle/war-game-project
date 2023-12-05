@@ -3,13 +3,15 @@ const enseignes = ['coeurs', 'piques', 'carreaux', 'trefles']; // "4 enseignes
 const valeurs = ['deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'valet', 'reine',
                          'roi', 'as']; // "13 valeurs"
 
-// La fonction createDeck() génère un deck de cartes complet en créant une nouvelle carte pour chaque combinaison de
-// valeur et d'enseigne, puis en ajoutant cette carte au deck
+// On intègre des images (voir le dossier : public/cards) correspondant à chaque combinaison de carte avec la fonction
+// createDeck() qui génère un deck de cartes complet en créant une nouvelle carte pour chaque combinaison de valeur et
+// d'enseigne qui associe chaque carte à son image correspondante puis l'ajoute au deck
 function createDeck() {
     let deck = [];
     for (let enseigne of enseignes) {
         for (let valeur of valeurs) {
-            let image = `./assets/cards/${enseigne}_${valeur}.png`; // Chemin de l'image
+            // Chemin de l'image
+            let image = `/cards/${valeur}_${enseigne}.jpg`;
             deck.push({ enseigne, valeur, image });
         }
     }
