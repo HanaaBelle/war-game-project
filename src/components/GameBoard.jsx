@@ -37,35 +37,47 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
     // Indique si les cartes doivent être affichées
     const [revealCards, setRevealCards] = useState(false);
 
+    // Indique si c'est le premier tour : indiquant que le premier tour est terminé.
+    const [firstRound, setFirstRound] = useState(true);
+
     // La mission de cette fonction est que chaque clique sur le bouton "WAR_fr.png" entraîne le retournement de
     // la carte du haut de chaque deck et l'appel de la fonction "compareCards" compare les cartes des deux joueurs
     // pour déterminer quel joueur gagne le tour
     const jouerTour = () => {
 
-        // Révéler les cartes
-        setRevealCards(true);
+        if (firstRound) {
+            // Révéler les cartes pour le premier tour sans modifier le score :
+            // lors du premier clic, les cartes sont révélées (setRevealCards(true)) mais aucun score n'est modifié
+            setRevealCards(true);
 
-        if (decks_des_joueurs.joueur_1.length > 0 && decks_des_joueurs.joueur_2.length > 0) {
+            setFirstRound(false);
 
-            const carteJoueur1 = decks_des_joueurs.joueur_1.shift();
-            const carteJoueur2 = decks_des_joueurs.joueur_2.shift();
+        }
+        // Ici l'état "firstRound" est mis à false, indiquant que le premier tour est terminé.
+        else {
+            // Jouer le tour normalement
+            if (decks_des_joueurs.joueur_1.length > 0 && decks_des_joueurs.joueur_2.length > 0) {
 
-            // Appel de la fonction "compareCards" pour déterminer le gagnant à chaque tour en comparant les valeurs
-            // des cartes
-            const gagnant = compareCards(Number(carteJoueur1.valeur), Number(carteJoueur2.valeur));
+                const carteJoueur1 = decks_des_joueurs.joueur_1.shift();
+                const carteJoueur2 = decks_des_joueurs.joueur_2.shift();
 
-            // Mettre à jour le score en fonction de la logique de notre jeu
-            if (gagnant === 'joueur_1') {
-                setScoreJoueur1(prevScore => prevScore + 1);
-            } else if (gagnant === 'joueur_2') {
-                setScoreJoueur2(prevScore => prevScore + 1);
+                // Appel de la fonction "compareCards" pour déterminer le gagnant à chaque tour en comparant les valeurs
+                // des cartes
+                const gagnant = compareCards(Number(carteJoueur1.valeur), Number(carteJoueur2.valeur));
+
+                // Mettre à jour le score en fonction de la logique de notre jeu
+                if (gagnant === 'joueur_1') {
+                    setScoreJoueur1(prevScore => prevScore + 1);
+                } else if (gagnant === 'joueur_2') {
+                    setScoreJoueur2(prevScore => prevScore + 1);
+                }
+
+                // Mettre à jour l'état des decks
+                set_decks_des_joueurs({
+                    joueur_1: [...decks_des_joueurs.joueur_1],
+                    joueur_2: [...decks_des_joueurs.joueur_2]
+                });
             }
-
-            // Mettre à jour l'état des decks
-            set_decks_des_joueurs({
-                joueur_1: [...decks_des_joueurs.joueur_1],
-                joueur_2: [...decks_des_joueurs.joueur_2]
-            });
         }
     };
 

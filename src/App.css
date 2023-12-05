@@ -3,7 +3,6 @@
   box-sizing: border-box; /* Cela aide à gérer le layout plus prévisiblement */
   border-radius: 40px;
   font-size: 21px;
-  font-style: ;
 }
 
 @font-face {

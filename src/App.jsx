@@ -11,8 +11,8 @@ function App() {
   return (
     <>
         <div className="App text-black flex flex-col items-center justify-center rounded-3xl mx-auto">
-            <GameBoard setScoreJoueur1={setScoreJoueur1} setScoreJoueur2={setScoreJoueur2} />
             <ScoreBoard scoreJoueur1={scoreJoueur1} scoreJoueur2={scoreJoueur2} />
+            <GameBoard setScoreJoueur1={setScoreJoueur1} setScoreJoueur2={setScoreJoueur2} />
         </div>
     </>
   )
