@@ -1,7 +1,6 @@
 // Représentation des cartes d'un jeu standard de 52 cartes contenant
 const enseignes = ['coeurs', 'piques', 'carreaux', 'trefles']; // "4 enseignes
-const valeurs = ['deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'valet', 'reine',
-                         'roi', 'as']; // "13 valeurs"
+const valeurs = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14']; // "13 valeurs"
 
 // On intègre des images (voir le dossier : public/cards) correspondant à chaque combinaison de carte avec la fonction
 // createDeck() qui génère un deck de cartes complet en créant une nouvelle carte pour chaque combinaison de valeur et
@@ -38,4 +37,18 @@ function distributeCards(deck) {
     return [deck.slice(0, moitie_du_deck), deck.slice(moitie_du_deck)];
 }
 
-export { createDeck, shuffleDeck, distributeCards };
+//  La fonction "compareCards" détermine le gagnant en comparant les cartes suivant la logique de la plus grande
+//  valeur ou égalité
+function compareCards(valeurCarteJoueur1, valeurCarteJoueur2) {
+    // Comparer les cartes des joueurs
+    if(valeurCarteJoueur1 > valeurCarteJoueur2) {
+        // Retourner 'joueur_1'
+        return 'joueur_1'
+    } else if (valeurCarteJoueur1 < valeurCarteJoueur2) {
+        // Retourner 'joueur_2'
+        return 'joueur_2'
+    }
+    // Sinon, ils sont à égalité
+}
+
+export { createDeck, shuffleDeck, distributeCards, compareCards };

@@ -126,7 +126,11 @@ images de cartes (voir GameLogic.js).
 
 #### 3.11 Réaliser la fonction "jouerTour" 
 Lorsqu'on clique sur le bouton "Bataille" ça entraîne le retournement des cartes des deux decks des joueurs
-(voir GameBoard.jsx) qui appelle la fonction "compareCards". 
+(voir GameBoard.jsx) qui appelle la fonction "compareCards".
+
+#### 3.12 Réaliser la fonction "compareCards"
+Elle compare les cartes des deux decks des joueurs puis détermine le gagnant des deux ou s'ils sont à égalité 
+(voir GameLogic.jsx).
 
 
 # React + Vite

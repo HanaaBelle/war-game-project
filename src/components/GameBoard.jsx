@@ -51,7 +51,7 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
 
             // Appel de la fonction "compareCards" pour déterminer le gagnant à chaque tour en comparant les valeurs
             // des cartes
-            const gagnant = compareCards(carteJoueur1, carteJoueur2);
+            const gagnant = compareCards(Number(carteJoueur1.valeur), Number(carteJoueur2.valeur));
 
             // Mettre à jour le score en fonction de la logique de notre jeu
             if (gagnant === 'joueur_1') {
@@ -100,7 +100,7 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                 </div>
 
                 <div className="flex items-center justify-center my-4">
-                        <img src={"/cards/WAR_fr.png"} className="war-game mb-2 rounded-3xl cursor-pointer"
+                        <img src={"/cards/warGame.png"} className="war-game mb-2 rounded-3xl cursor-pointer"
                              alt="war game"
                              height="100px" width="100px" onClick={jouerTour}/>
                 </div>
