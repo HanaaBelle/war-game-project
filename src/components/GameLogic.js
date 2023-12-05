@@ -1,20 +1,20 @@
 // Représentation des cartes d'un jeu standard de 52 cartes contenant
-const suites = ['Coeurs', 'Piques', 'Carreaux', 'Trèfles']; // "4 enseignes
-const valeurs = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valet', 'Reine', 'Roi', 'As']; // "13 valeurs"
+const enseignes = ['coeurs', 'piques', 'carreaux', 'trefles']; // "4 enseignes
+const valeurs = ['deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'valet', 'reine',
+                         'roi', 'as']; // "13 valeurs"
 
-// La fonction createDeck() génère un deck de cartes complet en créant une nouvelle carte pour chaque combinaison de valeur et
-// d'enseigne, puis en ajoutant cette carte au deck
+// La fonction createDeck() génère un deck de cartes complet en créant une nouvelle carte pour chaque combinaison de
+// valeur et d'enseigne, puis en ajoutant cette carte au deck
 function createDeck() {
     let deck = [];
-    for (let valeur of valeurs) {
-        for (let suite of suites){
-            deck.push({ valeur , suite });
+    for (let enseigne of enseignes) {
+        for (let valeur of valeurs) {
+            let image = `./assets/cards/${enseigne}_${valeur}.png`; // Chemin de l'image
+            deck.push({ enseigne, valeur, image });
         }
     }
     return deck;
 }
-
-const deck = createDeck();
 
 // La fonction shuffleDeck(deck) basée sur l'algorithme de mélange de "Fisher-Yates" aussi appelé "mélange de Knuth"
 // qui mélange les cartes en parcourant le deck de la fin au début et en échangeant chaque carte avec une autre carte
@@ -27,7 +27,6 @@ function shuffleDeck(deck) {
 
         [deck[i], deck[j]] = [deck[j], deck[i]];
     }
-    console.log(deck);
 }
 
 // La fonction distributeCards(deck) permet de distribuer équitablement les cartes entre les deux joueurs.
@@ -37,9 +36,4 @@ function distributeCards(deck) {
     return [deck.slice(0, moitie_du_deck), deck.slice(moitie_du_deck)];
 }
 
-
-console.log(createDeck());
-
-shuffleDeck(deck);
-
-console.log(distributeCards(deck))
+export { createDeck, shuffleDeck, distributeCards };
