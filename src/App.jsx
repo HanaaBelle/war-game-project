@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import GameBoard from './components/GameBoard.jsx';
 import ScoreBoard from './components/ScoreBoard.jsx';
 
-import './App.css'
+import './App.css';
 
 function App() {
     // On ajoute un état pour gérer les scores des deux joueurs

@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {compareCards, createDeck, distributeCards, shuffleDeck} from './GameLogic.js';
 
+import "../../src/App.css";
+
 // La fonction GameBoard(setScoreJoueur1, setScoreJoueur2) affiche les decks des joueurs et gére les clics sur les decks
 function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
 
@@ -97,7 +99,7 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                                  alt="Dos de carte"
                                  className='bg-red-800 rounded-xl shadow-lg p-2 m-2 h-auto' height="250px" width="250px"/>
                         )}
-                        <div className="mb-2">Vous</div>
+                        <div className="mb-2">🫵</div>
                     </div>
 
                     {/* Affichage du deck du joueur 2 */}
@@ -107,7 +109,7 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                                  alt="Dos de carte"
                                  className='bg-red-800 rounded-xl shadow-lg p-2 m-2 h-auto' height="250px" width="250px"/>
                         )}
-                        <div className="mb-2">L'ordinateur</div>
+                        <div className="mb-2">💻</div>
                     </div>
 
                 </div>
