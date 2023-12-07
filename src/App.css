@@ -32,17 +32,17 @@ body {
   text-align: center;
 }
 
-.img {
-  height: 6em;
+img {
+  height: 50em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
-.img:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+img:hover {
+  filter: drop-shadow(0 0 2em #dc9b0f);
 }
-.img.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+img.react:hover {
+  filter: drop-shadow(0 0 2em rgb(139, 6, 22));
 }
 
 @keyframes img {
@@ -64,7 +64,7 @@ body {
   body {
     font-size: 16px; /* Taille de police encore plus petite pour les téléphones */
   }
-  .img {
+  img {
     height: 4em; /* Taille de img réduite pour les petits écrans */
   }
 }

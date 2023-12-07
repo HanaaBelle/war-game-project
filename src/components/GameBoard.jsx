@@ -93,7 +93,7 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                 <div className="game-board rounded-lg flex justify-around items-center w-full">
 
                     {/* Affichage du deck du joueur 1 */}
-                    <div className="flex flex-col items-center rounded-3xl justify-center m-7">
+                    <div className="flex flex-col items-center rounded-3xl justify-center mr-7">
                         {decks_des_joueurs.joueur_1[0] && (
                             <img src={revealCards ? decks_des_joueurs.joueur_1[0]?.image : dosDeCarte}
                                  alt="Dos de carte"
@@ -103,7 +103,7 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                     </div>
 
                     {/* Affichage du deck du joueur 2 */}
-                    <div className="flex flex-col items-center rounded-3xl justify-center m-7">
+                    <div className="flex flex-col items-center rounded-3xl justify-center ml-7">
                         {decks_des_joueurs.joueur_2[0] && (
                             <img src={revealCards ? decks_des_joueurs.joueur_2[0]?.image : dosDeCarte}
                                  alt="Dos de carte"
@@ -115,8 +115,8 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                 </div>
 
                 <div className="flex items-center justify-center">
-                    <img src={"/cards/warGame.png"} className="war-game mb-2 rounded-xl h-auto cursor-pointer"
-                         alt="war game" height="100px" width="100px" onClick={jouerTour}/>
+                    <img src={"/cards/warGame.png"} className="war-game pt-0 rounded-xl h-auto cursor-pointer"
+                         alt="war game" height="150px" width="150px" onClick={jouerTour}/>
                 </div>
             </div>
 
