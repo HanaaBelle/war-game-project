@@ -10,7 +10,8 @@ function App() {
     const [scoreJoueur2, setScoreJoueur2] = useState(0);
   return (
     <>
-        <div className="App text-black flex flex-col items-center justify-center rounded-3xl m-auto w-full min-h-screen px-4 sm:px-6 lg:px-8">
+        <div className="App text-black flex flex-col items-center justify-center rounded-3xl m-auto w-full min-h-screen
+        px-4 sm:px-6 lg:px-8 text-base md:text-lg lg:text-xl landscape:text-lg">
             <ScoreBoard scoreJoueur1={scoreJoueur1} scoreJoueur2={scoreJoueur2} />
             <GameBoard setScoreJoueur1={setScoreJoueur1} setScoreJoueur2={setScoreJoueur2} />
         </div>

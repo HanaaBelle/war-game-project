@@ -115,7 +115,7 @@ function GameBoard({setScoreJoueur1, setScoreJoueur2}) {
                 </div>
 
                 <div className="flex items-center justify-center">
-                    <img src={"/cards/warGame.png"} className="war-game pt-0 rounded-xl h-auto cursor-pointer"
+                    <img src={"/cards/warGame.png"} className="war-game pt-0 mb-2 rounded-xl h-auto cursor-pointer"
                          alt="war game" height="150px" width="150px" onClick={jouerTour}/>
                 </div>
             </div>
