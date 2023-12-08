@@ -1,0 +1,34 @@
+/* Pour les appareils en mode paysage (orientation horizontale) */
+@media screen and (orientation: landscape) {
+    body {
+        /* Ajustements pour le mode paysage */
+        font-size: 16px; /* Réduire la taille de la police pour le mode paysage */
+        margin: 0; /* Réduire les marges */
+        padding: 8px; /* Réduire le padding */
+    }
+
+    .App {
+        flex-direction: row; /* Changer la direction flex pour une meilleure utilisation de l'espace horizontal */
+    }
+
+    img {
+        width: 30%; /* Ajuster la largeur des images */
+    }
+
+    /* Styles spécifiques pour les petits écrans en mode paysage */
+    @media screen and (max-height: 480px) {
+        .App {
+            flex-direction: row; /* Changer la direction flex pour une meilleure utilisation de l'espace horizontal */
+        }
+
+        body {
+            font-size: 16px; /* Exemple : taille de police réduite pour l'espace vertical limité */
+        }
+
+        img {
+            height: 3em; /* Ajustement de la taille de l'image */
+        }
+
+        /* Autres ajustements spécifiques */
+    }
+}
